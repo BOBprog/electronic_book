@@ -1,0 +1,328 @@
+    <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IUCA College | Excellence in Education</title>
+    <style>
+        :root {
+            --primary-color: #003366; 
+            --accent-color: #ffcc00;  
+            --text-dark: #333;
+            --text-light: #f4f4f4;
+            --bg-light: #f9f9f9;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: #f4f4f4;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: var(--text-light);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0,51,102,0.7), rgba(0,51,102,0.5)), url('https://static.wixstatic.com/media/d03161_282610ba09664c4cb0b27c2832a887d9~mv2.jpg/v1/fill/w_489,h_375,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/WhatsApp%20Image%202025-12-08%20at%2010_23_edited.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--text-light);
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            padding: 10px 25px;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: transform 0.2s;
+        }
+
+        .hero-btn:hover {
+            transform: scale(1.05);
+            background-color: #e6b800;
+        }
+
+        .features {
+            padding: 4rem 0;
+            background-color: white;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            font-size: 24px;
+        }
+
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+            gap: 20px;
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .program-card {
+            background: #fff;
+            display: flex;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border: 1px solid #eee;
+            overflow: hidden;
+            height: 160px; 
+        }
+
+        .program-img {
+            width: 40%;
+            object-fit: cover;
+        }
+
+        .program-content {
+            width: 60%;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start; 
+            background-color: #fcfcfc;
+        }
+
+        .program-title {
+            font-size: 13px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #2c3e50;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+
+        .program-btn {
+            background-color: #2c3e50;
+            color: white;
+            padding: 8px 20px;
+            font-size: 10px;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .program-btn:hover {
+            background-color: var(--primary-color);
+        }
+
+        .info-section {
+            padding: 4rem 0;
+            text-align: center;
+            background-color: var(--bg-light);
+        }
+
+        .map-section {
+            width: 100%;
+            padding: 0; 
+            margin-bottom: -5px;
+        }
+        
+        iframe {
+            width: 100%;
+            height: 450px;
+            border: 0;
+            display: block;
+        }
+
+        footer {
+            background-color: #222;
+            color: var(--text-light);
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            iframe {
+                height: 300px; 
+            }
+            .programs-grid {
+                grid-template-columns: 1fr; 
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">IUCA College</div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Главная</a></li>
+                    <li><a href="#academics">Программы</a></li>
+                    <li><a href="https://www.iuca.kg/">Приемная</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                    <li><a href="file:///Z:\===Сайт===/Практическая%208.html">Анкета    </a></li>
+                    <li><a href="#info">Информация</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1><b>Создайте свое будущее вместе с нами.</b></h1>
+            <p><i>Наша цель – дать студентам возможность достичь высоких результатов благодаря инновациям.</i></p>
+            <a href="https://admission.iuca.kg/ShortApplications/Create?culture=Ru-ru" class="hero-btn">Подайте заявку на 2026 год</a>
+        </div>
+    </section>
+
+    <section class="features" id="academics">
+        <h2 class="section-title">Академические программы</h2>
+        
+        <div class="programs-grid">
+            <div class="program-card">
+                <img src="https://static.wixstatic.com/media/704318ee9be94acabf28919a734951b8.jpg/v1/fill/w_743,h_901,fp_0.50_0.50,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/%D0%9A%D0%BE%D0%BD%D1%81%D0%BE%D0%BB%D1%8C%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F.jpg" class="program-img" alt="IT">
+                <div class="program-content">
+                    <div class="program-title">ИНФОРМАЦИОННЫЕ ТЕХНОЛОГИИ</div>
+                    <a href="https://college.iuca.kg/academic-programs/it" class="program-btn">ПОДРОБНЕЕ</a>
+                </div>
+            </div>
+
+            <div class="program-card">
+               <a href="https://college.iuca.kg/academic-programs/law"> 
+               	<img src="https://static.wixstatic.com/media/4f7e9d_c8f2aa9eb8274021841adb5cd7324a9f~mv2.jpg/v1/fill/w_425,h_480,fp_0.50_0.50,lg_1,q_80,enc_avif,quality_auto/1eb05a_72550b534983485ead351a302713ee6e~mv2.jpg" class="program-img" alt="Право"> </a>
+                <div class="program-content">
+                    <div class="program-title">ЮРИСПРУДЕНЦИЯ</div>
+                    <a href="https://college.iuca.kg/academic-programs/law" class="program-btn">ПОДРОБНЕЕ</a>
+                </div>
+            </div>
+
+            <div class="program-card">
+                <img src="https://static.wixstatic.com/media/4f7e9d_f08af5fb94274643866cade2efccd2a0~mv2.jpg/v1/fill/w_425,h_480,fp_0.50_0.50,lg_1,q_80,enc_avif,quality_auto/1eb05a_864b7e2dc4344a6d850aa4c4313ae587~mv2.jpg" class="program-img" alt="Английский">
+                <div class="program-content">
+                    <div class="program-title">ЛИНГВИСТИКА АНГЛИЙСКИЙ ЯЗЫК</div>
+                    <a href="https://college.iuca.kg/academic-programs/tis" class="program-btn">ПОДРОБНЕЕ</a>
+                </div>
+            </div>
+
+            <div class="program-card">
+                <img src="https://static.wixstatic.com/media/c8bfad_51ba4428b3e94579bf56bd635289ceec~mv2.jpeg/v1/fill/w_638,h_720,fp_0.50_0.50,q_85,enc_avif,quality_auto/WhatsApp%20Image%202025-03-01%20at%2021_42_57.jpeg" class="м" alt="Китайский">
+                <div class="program-content">
+                    <div class="program-title">ТУРИЗМ</div>
+                    <a href="https://college.iuca.kg/academic-programs/tour" class="program-btn">ПОДРОБНЕЕ</a>
+                </div>
+            </div>
+
+            <div class="program-card">
+                <img src="https://static.wixstatic.com/media/4f7e9d_0ffebb8cf4ee4c859fbf70e2da07591c~mv2.jpg/v1/fill/w_425,h_480,fp_0.50_0.50,lg_1,q_80,enc_avif,quality_auto/905346_e7f6584f9cbd475d98e23f1df5ce6109~mv2.jpg" class="program-img" alt="Педагогика">
+                <div class="program-content">
+                    <div class="program-title">ПЕДАГОГИКА</div>
+                    <a href="https://college.iuca.kg/academic-programs/ped" class="program-btn">ПОДРОБНЕЕ</a>
+                </div>
+            </div>
+
+    </section>
+
+    <section class="info-section" id="info">
+        <h2 class="section-title">Почему стоит выбрать IUCA?</h2>
+        <p style="max-width: 700px; margin: auto;">
+           Основанный в 2008 году, колледж IUCA является образцом знаний и высоких моральных принципов. Мы предлагаем программы бакалавриата и магистратуры, призванные подготовить студентов к работе в глобальной среде.
+        </p>
+    </section>
+
+    <section class="map-section">
+       <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1462.6098667397748!2d75.29752787954187!3d42.847093262125476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2skg!4v1770183905294!5m2!1sru!2skg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+         
+        </iframe>
+        <iframe src="https://learningapps.org/watch?v=pfzuocei226" style="border:0px;width:100%;height:500px" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
+    </section>
+
+    <footer id="contact">
+        <div class="container" style="flex-direction: column; gap: 10px;">
+            <h3>IUCA College</h3>
+            <p>Адрес: Кыргызская Республика<br>
+            г. Токмок, Комсомольская 141а   </p>
+            <p>Почта: info@iuca.kg</p>
+            <p>Тел.: +996 3138 60263</p>
+            <p>Тел.: +996 503 500 004</p>
+            <br>
+            <p>© 2026 IUCA College. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
