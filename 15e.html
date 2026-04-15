@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практическая 14</title>
+</head>
+<body>
+    <script>
+    const mas = [11, 24, 37, 44, 51, 67, 84, 99]; // Твой массив
+
+    document.write("<h3>Задание 7 (Нечетные):</h3>");
+    for (let i = 0; i < mas.length; i++) {
+        if (mas[i] % 2 !== 0) document.write(i + " => " + mas[i] + "<br>");
+    }
+
+    document.write("<h3>Задание 8 (На конце 4):</h3>");
+    for (let i = 0; i < mas.length; i++) {
+        if (mas[i] % 10 === 4) document.write(i + " => " + mas[i] + "<br>");
+    }
+
+    document.write("<h3>Задание 9 (На конце 7):</h3>");
+    for (let i = 0; i < mas.length; i++) {
+        if (mas[i] % 10 === 7) document.write(i + " => " + mas[i] + "<br>");
+    }
+</script>
+</body>
+</html>
